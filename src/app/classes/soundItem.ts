@@ -1,4 +1,4 @@
-export class soundItem{
+export class SoundItem{
     description: String = "";
     soundPath: String = "";
 

@@ -1,0 +1,19 @@
+<p>items works!</p>
+<div *ngFor="let item of allItems">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Загаловок</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button (click)="playSound(item)">Воспроизвести</button>
+  </mat-card-actions>
+  <mat-card-content>
+    <img src="{{ 'assets/images/icon-start.png' }}" [title]="title" class="image">
+    <p>
+      {{item.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+</div>
+
+
