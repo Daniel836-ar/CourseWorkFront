@@ -11,17 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './items.scss',
 })
 export class Items {
-  allItems: SoundItem[] = [new SoundItem("Как дела ?", "/assets/sounds/kakDela.mp3"),new SoundItem("Привет !", "/assets/sounds/privetDrug.mp3"), new SoundItem("Как неожиданно !", "/assets/sounds/votEtoPovorot.mp3")];
-  title: String = "Крутая подсказка";
-   
-
-
+  allItems: SoundItem[] = [
+    new SoundItem("Как дела ?", "/assets/sounds/kakDela.mp3"),
+    new SoundItem("Привет !", "/assets/sounds/privetDrug.mp3"), 
+    new SoundItem("Как неожиданно !", "/assets/sounds/votEtoPovorot.mp3")
+  ];
+  title: string = "Крутая подсказка"; 
   
-  //воспроизведение звука
-  playSound(item: SoundItem): void{
-    
+  // Воспроизведение звука
+  playSound(item: SoundItem): void {
     item.playSound();
-  
   }
+  
 }
-

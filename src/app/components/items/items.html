@@ -1,16 +1,26 @@
-<p>items works!</p>
 <div *ngFor="let item of allItems">
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>_________________</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <img src="{{ 'assets/images/icon-start.png' }}" (click)="playSound(item)" [title]="title" class="image">
-    <p>
-      {{item.description}}
-    </p>
-  </mat-card-content>
-</mat-card>
+  <mat-card>
+    <mat-card-header>
+      <!-- Невидимый элемент -->
+      <span class="placeholder" [class.hidden]="!item.isPlaying"> 
+        kek
+      </span>
+      <!-- Реальный элемент -->
+      <span *ngIf="item.isPlaying" class="isPlaying"> 
+        ● Сейчас играет...
+      </span>
+    </mat-card-header>
+    <mat-card-content>
+      <img 
+        [src]="item.iconPath" 
+        (click)="playSound(item)" 
+        [title]="title" 
+        class="image"
+        [alt]="item.description"
+      >
+      <p>
+        {{item.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
 </div>
-
-

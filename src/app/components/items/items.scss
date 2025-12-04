@@ -1,5 +1,25 @@
-.image{
-    width: 15%;
-    height: auto;
-    margin-bottom: 10px;
+.image {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+
+mat-card {
+    width: 60%;
+    margin-top: 2%;
+    mat-card-header {
+    height: 30px; 
+  
+  .placeholder {
+    visibility: hidden; // Занимает место, но не видна
+    font-size: 14px;
+  }
+  
+  .isPlaying {
+    position: absolute;
+    color: green;
+    font-size: 14px;
+    // font-weight: 500;
+  }
+}
 }
