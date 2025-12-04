@@ -1,9 +1,13 @@
 export class SoundItem{
-    description: String = "";
-    soundPath: String = "";
+    description: string = "";
+    soundPath: string = "";
+    private audio: HTMLAudioElement;
 
-    constructor(description: String, soundPath: String){
+    constructor(description: string, soundPath: string){
        this.description = description;
-       this.soundPath = soundPath;
+       this.audio = new Audio(soundPath);
+    }
+    playSound(){
+        this.audio.play();
     }
 }
