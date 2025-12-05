@@ -1,5 +1,5 @@
-<div *ngFor="let item of allItems">
-  <mat-card>
+<div class = "soundGrid">
+  <mat-card *ngFor="let item of allItems" class = "itemSound">
     <mat-card-header>
       <!-- Невидимый элемент -->
       <span class="placeholder" [class.hidden]="!item.isPlaying"> 

@@ -3,23 +3,33 @@
   height: auto;
   cursor: pointer;
 }
-
-mat-card {
+.soundGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 310px));
+  grid-row-gap: 20px;  
+}
+.itemSound {
     width: 60%;
     margin-top: 2%;
+    margin-left: 15%;
+    border: 1px solid #297b29;
+    border-radius: 10px;
+
     mat-card-header {
     height: 30px; 
+    }
   
   .placeholder {
     visibility: hidden; // Занимает место, но не видна
     font-size: 14px;
+    
   }
   
   .isPlaying {
     position: absolute;
     color: green;
     font-size: 14px;
-    // font-weight: 500;
-  }
+   
+  
 }
 }
